@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="card shadow">
-    <h1>Nierówności wymierne</h1>
-    <p>Nierówność wymierna to nierówność, która może być wyrażona jako:</p>
-    <p>$$ \frac{P(x)}{Q(x)} \leq R(x) $$</p>
-    <p>gdzie \( P(x) \), \( Q(x) \) i \( R(x) \) są wielomianami, a \( Q(x) \neq 0 \).</p>
-    <p>Przykład nierówności wymiernej:</p>
-    <p>$$ \frac{2x + 3}{x - 1} \geq 4 $$</p>
+    <div class='card shadow'>
+        <h1>Nierówności wymierne</h1>
+        <p>Nierówność wymierna nazywamy nierówność jednej z następujących postaci:</p>
+        <ul>
+            <li>$$\frac{W(x)}{P(x)} > 0$$</li>
+            <li>$$\frac{W(x)}{P(x)} \geq 0$$</li>
+            <li>$$\frac{W(x)}{P(x)} < 0$$</li>
+            <li>$$\frac{W(x)}{P(x)} \leq 0$$</li>
+        </ul>
+        <p>gdzie \( W(x) \) i \( P(x) \) są wielomianami, a \( P(x) \neq 0 \).</p>
+    </div>
+    <p>Tak naprawdę, rozwiązywanie nierówności wymiernych, sprowadza się do rozwiązywania nierówności wielomianowych:</p>
+    <ul>
+
+        <p>Dla nierówności \( \frac{W(x)}{P(x)} \geq 0 \) jest równoważna nierówności \( W(x) \cdot P(x) \geq 0 \), gdzie \( P(x) \neq 0 \).</p>
+        <p>Dla nierówności \( \frac{W(x)}{P(x)} \geq 0 \) jest równoważna nierówności \( W(x) \cdot P(x) \geq 0 \), gdzie \( P(x) \neq 0 \).</p>
+        <p>Dla nierówności \( \frac{W(x)}{P(x)} < 0 \) jest równoważna nierówności \( W(x) \cdot P(x) < 0 \), gdzie \( P(x) \neq 0 \).</p>
+        <p>Dla nierówności \( \frac{W(x)}{P(x)} \leq 0 \) jest równoważna nierówności \( W(x) \cdot P(x) \leq 0 \), gdzie \( P(x) \neq 0 \).</p>
+    </ul>
+    <p>Bardzo ważne jest, aby rozwiązując nierówności wymierne, pamiętać o wyznaczeniu dziedziny wyrażenia wymiernego.</p>
 </div>
 {% endblock %}
+
