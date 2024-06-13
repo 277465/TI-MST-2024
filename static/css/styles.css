@@ -89,4 +89,15 @@ p {
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
+
 }
+.image-row {
+    display: flex; /* Ustawia elementy w jednej linii */
+    justify-content: space-around; /* Rozkłada elementy równomiernie z przestrzenią dookoła */
+}
+
+.image-container {
+    flex-basis: 45%; /* Każdy kontener zajmuje około 45% szerokości kontenera nadrzędnego */
+    text-align: center; /* Wyśrodkowanie tekstu i obrazów w kontenerze */
+}
+
