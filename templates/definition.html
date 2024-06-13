@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+
 {% block content %}
-<h1>Definicja funkcji wymiernej</h1>
-<p>Funkcja wymierna to funkcja, która może być wyrażona jako iloraz dwóch wielomianów.</p>
+<div class="card shadow">
+    <h1>Definicja funkcji wymiernej</h1>
+    <p>Funkcja wymierna to funkcja, którą można zapisać w postaci:</p>
+    <p>$$ f(x) = \frac{W(x)}{P(x)} $$</p>
+    <p>gdzie:</p>
+    <ul>
+        <li>\( W(x) \) jest dowolnym wielomianem,</li>
+        <li>\( P(x) \) jest wielomianem niezerowym.</li>
+    </ul>
+    <p>Dziedziną takiej funkcji jest zbiór wszystkich liczb rzeczywistych \( x \), dla których \( P(x) \neq 0 \).</p>
+</div>
 {% endblock %}
