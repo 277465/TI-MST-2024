@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow">
+    <h1>Demonstracja</h1>
+    <form action="{{ url_for('plot') }}" method="post">
+        <label for="function">Podaj funkcję:</label>
+        <input type="text" id="function" name="function" required>
+        <button type="submit">Generuj wykres</button>
+    </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcja wymierna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Strona główna</a></li>
+            <li><a href="{{ url_for('project') }}"><i class="fas fa-info-circle"></i> O projekcie</a></li>
+            <li><a href="{{ url_for('demo') }}"><i class="fas fa-flask"></i> Demonstracja</a></li>
+            <li><a href="{{ url_for('authors') }}"><i class="fas fa-users"></i> O autorach</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="{{ url_for('introduction') }}">Wprowadzenie do funkcji wymiernej</a></li>
+                <li><a href="{{ url_for('inverse_proportion') }}">Proporcjonalność odwrotna</a></li>
+                <li><a href="{{ url_for('inverse_proportion_plot') }}">Wykres proporcjonalności odwrotnej</a></li>
+                <li><a href="{{ url_for('homographic_function') }}">Funkcja homograficzna</a></li>
+                <li><a href="{{ url_for('definition') }}">Definicja funkcji wymiernej</a></li>
+                <li><a href="{{ url_for('domain') }}">Dziedzina funkcji wymiernej</a></li>
+                <li><a href="{{ url_for('equations') }}">Równania wymierne</a></li>
+                <li><a href="{{ url_for('inequalities') }}">Nierówności wymierne</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
