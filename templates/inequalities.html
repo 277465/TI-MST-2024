@@ -22,5 +22,20 @@
     </ul>
     <p>Bardzo ważne jest, aby rozwiązując nierówności wymierne, pamiętać o wyznaczeniu dziedziny wyrażenia wymiernego.</p>
 </div>
+    <div class='card-body'>
+        <h2>Zadanie</h2>
+        <p>Rozwiąż nierówność wymierną:</p>
+        <p>$$\frac{1}{x} \geq 1$$</p>
+        <h3>Rozwiązanie</h3>
+        <p>Dziedzina nierówności jest zbiorem \( D = \mathbb{R} \setminus \{0\} \). Zakładając, że \( x \in D \), przenosimy 1 na lewą stronę równania:</p>
+        <p>$$\frac{1}{x} - 1 \geq 0$$</p>
+        <p>$$\frac{1 - x}{x} \geq 0$$</p>
+        <p>Zbiór rozwiązań powyższej nierówności wymiernej jest równy zbiorowi rozwiązań nierówności wielomianowej:</p>
+        <p>$$ (1 - x)x \geq 0 $$</p>
+        <p>przy założeniu, że \( x \in D \). Rysujemy parabolę będącą wykresem funkcji \( y = (1 - x)x \) dla \( x \in D \).</p>
+        <img src="{{ url_for('static', filename='Kot.jpg') }}" alt="Wykres funkcji y = (1 - x)x">
+        <p>Z rysunku, uwzględniając dziedzinę nierówności, odczytujemy jej rozwiązanie: $$ x \in (0, 1) $$</p>
+    </div>
+</div>
 {% endblock %}
 
