@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('strona_główna.html')
 
-@app.route('/project')
+@app.route('/projekt')
 def project():
-    return render_template('project.html')
+    return render_template('projekt.html')
 
 @app.route('/demo', methods=['GET', 'POST'])
 def demo():
@@ -37,41 +37,41 @@ def demo():
             pass
     return render_template('demo.html', image=image)
 
-@app.route('/authors')
+@app.route('/autorzy')
 def authors():
-    return render_template('authors.html')
+    return render_template('autorzy.html')
 
-@app.route('/introduction')
+@app.route('/Wprowadzenie')
 def introduction():
-    return render_template('introduction.html')
+    return render_template('Wprowadzenie''.html')
 
-@app.route('/inverse_proportion')
+@app.route('/proporcjonalność')
 def inverse_proportion():
-    return render_template('inverse_proportion.html')
+    return render_template('proporcjonalność.html')
 
-@app.route('/inverse_proportion_plot')
+@app.route('/Wykres_proporcjonalności')
 def inverse_proportion_plot():
-    return render_template('inverse_proportion_plot.html')
+    return render_template('Wykres_proporcjonalności.html')
 
-@app.route('/homographic_function')
+@app.route('/funkcja_homograficzna')
 def homographic_function():
-    return render_template('homographic_function.html')
+    return render_template('funkcja_homograficzna.html')
 
-@app.route('/definition')
+@app.route('/definicja')
 def definition():
-    return render_template('definition.html')
+    return render_template('definicja.html')
 
-@app.route('/domain')
+@app.route('/dziedzina')
 def domain():
-    return render_template('domain.html')
+    return render_template('dziedzina.html')
 
-@app.route('/equations')
+@app.route('/równania')
 def equations():
-    return render_template('equations.html')
+    return render_template('równania.html')
 
-@app.route('/inequalities')
+@app.route('/nierówności')
 def inequalities():
-    return render_template('inequalities.html')
+    return render_template('nierówności.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
