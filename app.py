@@ -11,11 +11,7 @@ def index():
     return render_template('strona_główna.html')
 
 
-@app.route('/projekt')
-
-
 @app.route('/project')
-
 def project():
     return render_template('projekt.html')
 
@@ -45,83 +41,47 @@ def demo():
     return render_template('demo.html', image=image)
 
 
-@app.route('/autorzy')
-
-
 @app.route('/authors')
-
 def authors():
     return render_template('autorzy.html')
 
 
-@app.route('/Wprowadzenie')
-
-
 @app.route('/introduction')
-
 def introduction():
-    return render_template('Wprowadzenie''.html')
-
-
-@app.route('/proporcjonalność')
+    return render_template('wprowadzenie.html')
 
 
 @app.route('/inverse_proportion')
-
 def inverse_proportion():
     return render_template('proporcjonalność.html')
 
 
-@app.route('/Wykres_proporcjonalności')
-
-
 @app.route('/inverse_proportion_plot')
-
 def inverse_proportion_plot():
-    return render_template('Wykres_proporcjonalności.html')
-
-
-@app.route('/funkcja_homograficzna')
+    return render_template('wykres_proporcjonalności.html')
 
 
 @app.route('/homographic_function')
-
 def homographic_function():
     return render_template('funkcja_homograficzna.html')
 
 
-@app.route('/definicja')
-
-
 @app.route('/definition')
-
 def definition():
     return render_template('definicja.html')
 
 
-@app.route('/dziedzina')
-
-
 @app.route('/domain')
-
 def domain():
     return render_template('dziedzina.html')
 
 
-@app.route('/równania')
-
-
 @app.route('/equations')
-
 def equations():
     return render_template('równania.html')
 
 
-@app.route('/nierówności')
-
-
 @app.route('/inequalities')
-
 def inequalities():
     return render_template('nierówności.html')
 
