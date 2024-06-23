@@ -2,45 +2,55 @@
 {% block content %}
 <div class="card shadow">
     <h1>Równania wymierne</h1>
-    <p><strong>Definicja:</strong> Równaniem wymiernym z niewiadomą \(x\) nazywamy równanie, które można przekształcić równoważnie do postaci:</p>
-    <p>$$ \frac{W(x)}{P(x)} = 0 $$</p>
-    <p>gdzie \( W(x) \) oraz \( P(x) \) są wielomianami i \( P(x) \neq 0 \).</p>
-    <p>Każde równanie zawierające tylko ułamki algebraiczne można sprowadzić do równania:</p>
-    <p>$$ \frac{W(x)}{P(x)} = 0 $$</p>
-    <p>Dziedziną tego równania są wszystkie argumenty, dla których \( P(x) \neq 0 \).</p>
-    <p>Rozwiązaniem są liczby należące do dziedziny, dla których \( W(x) = 0 \).</p>
-    <h3>Przykład 1.</h3>
-    <p>Rozwiąż równanie \[\frac{2x + 3}{x - 1} = 4.\]</p>
-    <h4>Rozwiązanie:</h4>
-    <p>Najpierw ustalamy dziedzinę:</p>
-    <p>\[x - 1 \neq 0\]</p>
-    <p>\[x \neq 1\]</p>
-    <p>\[D = \mathbb{R}\setminus\{1\}.\]</p>
-    <p>Przenosimy prawą stronę równania na lewą i sprowadzamy do wspólnego mianownika:</p>
-    <p>\[\frac{2x + 3}{x - 1} - 4 = 0\]</p>
-    <p>\[\frac{2x + 3}{x - 1} - \frac{4(x - 1)}{x - 1} = 0\]</p>
-    <p>\[\frac{2x + 3 - 4(x - 1)}{x - 1} = 0\]</p>
-    <p>\[\frac{2x + 3 - 4x + 4}{x - 1} = 0\]</p>
-    <p>\[\frac{-2x + 7}{x - 1} = 0.\]</p>
-    <p>Powyższa równość jest prawdziwa tylko wtedy, gdy licznik jest równy 0:</p>
-    <p>\[-2x + 7 = 0\]</p>
-    <p>\[-2x = -7\]</p>
-    <p>\[x = \frac{7}{2}.\]</p>
-    <p>Liczba \(\frac{7}{2}\) należy do dziedziny, więc jest rozwiązaniem równania.</p>
-    <h3>Przykład 2.</h3>
-    <p>Wiadomo, że liczba \(x = \frac{1}{2}\) jest rozwiązaniem równania \(x + \frac{1}{m^2} \cdot x = \frac{2}{m}\). Wyznacz wartość \(m\).</p>
-    <h4>Rozwiązanie:</h4>
-    <p>Przede wszystkim zauważmy, że musimy wykluczyć z rozważań wartość m = 0, ponieważ m występuje jako czynnik w mianowniku lewej strony równania.</p>
-    <p>Podstawiamy x = \(\frac{1}{2}\) do równania x + \(\frac{1}{m^2} \cdot x\) = \(\frac{2}{m}\) i przekształcamy otrzymane równanie z niewiadomą m:</p>
-    <p>\[\frac{1}{2} + \frac{1}{m^2 \cdot \frac{1}{2}}\ = \frac{2}{m}\]<p>
-    </p>\[\frac{1}{2} + \frac{2}{m^2}\ = \frac{2}{m}\]<p>
-    </p>\[m^2 + 4 = 4m\]<p>
-    </p>\[m^2 - 4m + 4 = 0\]</p>
-    <p>Zauważmy, że lewa strona ostatniego równania jest kwadratem wyrażenia m - 2 na mocy wzoru skróconego mnożenia \(a^2 - 2ab + b^2\).</p>
-    <p>Otrzymujemy więc:</p>
-    <p>\[(m - 2)^2 = 0\]</p>
-    <p>\[m = 2\]</p>
-    <p>Otrzymana wartość mjest różna od zera, spełnia więc warunek sformułowany na początku rozwiązania.</p>
-    <p>Ostatecznie wnioskujemy, że jeżeli liczba x = \(\frac{1}{2}\) jest rozwiązaniem równania x + \(\frac{1}{m^2} \cdot x\) = \(\frac{2}{m}\), to m = 2.</p>
+    <section>
+        <p><strong>Definicja:</strong> Równaniem wymiernym z niewiadomą \(x\) nazywamy równanie, które można przekształcić równoważnie do postaci:</p>
+        <p>$$ \frac{W(x)}{P(x)} = 0 $$</p>
+        <p>gdzie \( W(x) \) oraz \( P(x) \) są wielomianami i \( P(x) \neq 0 \).</p>
+        <p>Każde równanie zawierające tylko ułamki algebraiczne można sprowadzić do równania:</p>
+        <p>$$ \frac{W(x)}{P(x)} = 0 $$</p>
+        <p>Dziedziną tego równania są wszystkie argumenty, dla których \( P(x) \neq 0 \).</p>
+        <p>Rozwiązaniem są liczby należące do dziedziny, dla których \( W(x) = 0 \).</p> 
+    </section>
+   
+    
+    <section>
+        <h3>Przykład 1.</h3>
+        <p>Rozwiąż równanie \[\frac{2x + 3}{x - 1} = 4.\]</p>
+        <h4>Rozwiązanie:</h4>
+        <p>Najpierw ustalamy dziedzinę:</p>
+        <p>\[x - 1 \neq 0\]</p>
+        <p>\[x \neq 1\]</p>
+        <p>\[D = \mathbb{R}\setminus\{1\}.\]</p>
+        <p>Przenosimy prawą stronę równania na lewą i sprowadzamy do wspólnego mianownika:</p>
+        <p>\[\frac{2x + 3}{x - 1} - 4 = 0\]</p>
+        <p>\[\frac{2x + 3}{x - 1} - \frac{4(x - 1)}{x - 1} = 0\]</p>
+        <p>\[\frac{2x + 3 - 4(x - 1)}{x - 1} = 0\]</p>
+        <p>\[\frac{2x + 3 - 4x + 4}{x - 1} = 0\]</p>
+        <p>\[\frac{-2x + 7}{x - 1} = 0.\]</p>
+        <p>Powyższa równość jest prawdziwa tylko wtedy, gdy licznik jest równy 0:</p>
+        <p>\[-2x + 7 = 0\]</p>
+        <p>\[-2x = -7\]</p>
+        <p>\[x = \frac{7}{2}.\]</p>
+        <p>Liczba \(\frac{7}{2}\) należy do dziedziny, więc jest rozwiązaniem równania.</p>
+    </section>
+    
+    <section>
+        <h3>Przykład 2.</h3>
+        <p>Wiadomo, że liczba \(x = \frac{1}{2}\) jest rozwiązaniem równania \(x + \frac{1}{m^2} \cdot x = \frac{2}{m}\). Wyznacz wartość \(m\).</p>
+        <h4>Rozwiązanie:</h4>
+        <p>Przede wszystkim zauważmy, że musimy wykluczyć z rozważań wartość m = 0, ponieważ m występuje jako czynnik w mianowniku lewej strony równania.</p>
+        <p>Podstawiamy x = \(\frac{1}{2}\) do równania x + \(\frac{1}{m^2} \cdot x\) = \(\frac{2}{m}\) i przekształcamy otrzymane równanie z niewiadomą m:</p>
+        <p>\[\frac{1}{2} + \frac{1}{m^2 \cdot \frac{1}{2}}\ = \frac{2}{m}\]<p>
+        </p>\[\frac{1}{2} + \frac{2}{m^2}\ = \frac{2}{m}\]<p>
+        </p>\[m^2 + 4 = 4m\]<p>
+        </p>\[m^2 - 4m + 4 = 0\]</p>
+        <p>Zauważmy, że lewa strona ostatniego równania jest kwadratem wyrażenia m - 2 na mocy wzoru skróconego mnożenia \(a^2 - 2ab + b^2\).</p>
+        <p>Otrzymujemy więc:</p>
+        <p>\[(m - 2)^2 = 0\]</p>
+        <p>\[m = 2\]</p>
+        <p>Otrzymana wartość mjest różna od zera, spełnia więc warunek sformułowany na początku rozwiązania.</p>
+        <p>Ostatecznie wnioskujemy, że jeżeli liczba x = \(\frac{1}{2}\) jest rozwiązaniem równania x + \(\frac{1}{m^2} \cdot x\) = \(\frac{2}{m}\), to m = 2.</p>
+    </section>
+    
 </div>
 {% endblock %}
