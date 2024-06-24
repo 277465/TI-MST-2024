@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Old Standard TT
+- Font Author: Copyright 2011 The Old Standard Project Authors (amkryukov@gmail.com)
+- Font Source: https://fonts.gstatic.com/s/oldstandardtt/v20/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-dTFxeb80flQ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
