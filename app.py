@@ -1,10 +1,10 @@
-import matplotlib
-from flask import Flask, render_template, request
-import numpy as np
-# from views import app as views_app
-import matplotlib.pyplot as plt
-from io import BytesIO
 import base64
+from io import BytesIO
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
