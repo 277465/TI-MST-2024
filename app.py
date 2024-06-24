@@ -1,56 +1,56 @@
 import matplotlib
-matplotlib.use('Agg')
 from flask import Flask, render_template, request
 import numpy as np
-from views import app as views_app
+# from views import app as views_app
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 
 app = Flask(__name__)
 
+
 def plot_function(a, b, c, d):
+    matplotlib.use('Agg')
+
     x = np.linspace(-10, 10, 400)
     y = (a * x + b) / (c * x + d)
-   
-    
+
     fig, ax = plt.subplots()
 
     # Definiowanie asymptoty
     vertical_asymptote_x = -d / c
 
+    # nie rysuj linii w miejscu asymptoty
     left_mask = x < vertical_asymptote_x
     right_mask = x > vertical_asymptote_x
 
-    ax.plot(x[left_mask], y[left_mask], label=f'({a}x + {b}) / ({c}x + {d}) po lewej')
-    ax.plot(x[right_mask], y[right_mask], label=f'({a}x + {b}) / ({c}x + {d}) po prawej')
+    ax.plot(x[left_mask], y[left_mask], color='blue', label=fr"$f(x) = \frac{{{a}x+{b}}}{{{c}x+{d}}}$")
+    ax.plot(x[right_mask], y[right_mask], color='blue')
 
-    
     ax.axhline(0, color='black', linewidth=0.5)
     ax.axvline(0, color='black', linewidth=0.5)
     ax.grid(color='gray', linestyle='--', linewidth=0.5)
     ax.set_xlim([-10, 10])
     ax.set_ylim([-10, 10])
 
-    
-
     if c != 0:
         asymptote_x = -d / c
-        ax.axvline(asymptote_x, color='red', linestyle='--', label=f'x = {-d/c:.2f}')
+        ax.axvline(asymptote_x, color='magenta', linestyle='--', label=f'asymptota pionowa: x = {-d / c:.2f}')
     if a != 0:
         asymptote_y = a / c
-        ax.axhline(asymptote_y, color='blue', linestyle='--', label=f'y = {a/c:.2f}')
-    
+        ax.axhline(asymptote_y, color='green', linestyle='--', label=f'asymptota pozioma: y = {a / c:.2f}')
 
+    ax.legend()
     buf = BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
     string = base64.b64encode(buf.read())
     uri = 'data:image/png;base64,' + string.decode('utf-8')
-    
+
     return uri
 
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/demo', methods=['GET', 'POST'])
 def demonstrate_function():
     image = None
     if request.method == 'POST':
@@ -62,8 +62,9 @@ def demonstrate_function():
             image = plot_function(a, b, c, d)
         except Exception as e:
             print(f"Error: {e}")
-    
+
     return render_template('demo.html', image=image)
+
 
 @app.route('/')
 def index():
