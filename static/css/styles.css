@@ -1,6 +1,7 @@
 /* Ogólne ustawienia strony */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Cambria Math';
+    font-size: 25px;
     background-color: #121212;
     color: #ffffff;
     margin: 0;

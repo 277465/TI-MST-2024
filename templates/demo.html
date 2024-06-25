@@ -3,18 +3,18 @@
 <div class="card shadow">
     <h1>Demonstracja funkcji wymiernej</h1>
     <section>
-        <p>Program rysuje funkcję zadaną wzorem \[\frac{ax + b}{cx+d}.\] Wypełnij parametry \(a\), \(b\), \(c\), \(d\) i wciśnij "Generuj wykres".</p>
+        <p>Program rysuje funkcję zadaną wzorem \[\dfrac{ax + b}{cx+d}.\] Wypełnij parametry \(a\), \(b\), \(c\), \(d\) i wciśnij "Generuj wykres".</p>
     </section>
     <section>
         <form method="post">
             <label for="a">a:</label>
-            <input type="number" name="a" step="any" required>
+            <input id="a" type="number" name="a" step="any" required>
             <label for="b">b:</label>
-            <input type="number" name="b" step="any" required>
+            <input id="b" type="number" name="b" step="any" required>
             <label for="c">c:</label>
-            <input type="number" name="c" step="any" required>
+            <input id="c" type="number" name="c" step="any" required>
             <label for="d">d:</label>
-            <input type="number" name="d" step="any" required>
+            <input id="d" type="number" name="d" step="any" required>
             <button type="submit">Generuj wykres</button>
         </form>
         {% if image %}
